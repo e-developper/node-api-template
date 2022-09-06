@@ -1,4 +1,4 @@
 # Title
 
 ## Starting
-- yarn start to run locally
+- `yarn start` to run locally
