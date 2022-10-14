@@ -1,4 +1,5 @@
 # Title
 
 ## Starting
-- `yarn start` to run locally
+- `yarn install` to install dependencies
+- `yarn serve` to start a function Emulator locally
