@@ -22,5 +22,5 @@ app.get('/', (_req: Request, res: Response) => {
 })
 
 app.listen(3000, () => {
-  return console.log(`Application running on poirt ${3000}`)
+  return console.log(`Application running on port ${3000}`)
 })
