@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 
 const app = express()
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json())
 app.use(
@@ -21,6 +22,6 @@ app.get('/', (_req: Request, res: Response) => {
   res.status(200).send('home')
 })
 
-app.listen(3000, () => {
-  return console.log(`Application running on port ${3000}`)
+app.listen(port, () => {
+  return console.log(`Application running on port ${port}`)
 })
