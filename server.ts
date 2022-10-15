@@ -11,6 +11,10 @@ app.get('/swagger', (_req: Request, res: Response) => {
   res.status(200).send('oi')
 })
 
+app.get('/', (_req: Request, res: Response) => {
+  res.status(200).send('home')
+})
+
 app.listen(port, () => {
   console.log(`Application running on poirt ${port}`)
 })

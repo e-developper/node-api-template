@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.ts",
-    "dev": "nodemon server.ts",
     "build": "tsc --build --clean && tsc --build --verbose",
     "functions:deploy": "cd ./functions && yarn deploy",
     "functions:server": "cd ./functions && yarn serve"
