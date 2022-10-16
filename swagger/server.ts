@@ -17,11 +17,11 @@ app.use(bodyParser.json())
 
 console.log(swaggerSchema);
 
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerSchema))
+
 app.get('*', (_req: Request, res: Response) => {
   res.redirect('swagger')
 })
-
-app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerSchema))
 
 app.listen(port, () => {
   return console.log(`Application running on port ${port}`)
