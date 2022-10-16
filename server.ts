@@ -1,6 +1,12 @@
 import express, { Request, Response } from 'express'
 import bodyParser from 'body-parser'
-import { config } from './config'
+// import { config } from './config'
+
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -14,6 +20,6 @@ app.get('/', (_req: Request, res: Response) => {
   res.status(200).send('home')
 })
 
-app.listen(config.server.port, () => {
-  return console.log(`Application running on port ${config.server.port}`)
+app.listen(port, () => {
+  return console.log(`Application running on port ${port}`)
 })
