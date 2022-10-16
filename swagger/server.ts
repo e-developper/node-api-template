@@ -1,6 +1,5 @@
 import express, { Request, Response } from 'express'
 import bodyParser from 'body-parser'
-// import { config } from './config'
 
 import dotenv from 'dotenv'
 
@@ -13,11 +12,11 @@ const app = express()
 app.use(bodyParser.json())
 
 app.get('/swagger', (_req: Request, res: Response) => {
-  res.status(200).send('oi')
+  res.send('oi1')
 })
 
 app.get('/', (_req: Request, res: Response) => {
-  res.status(200).send('home')
+  res.send('home')
 })
 
 app.listen(port, () => {

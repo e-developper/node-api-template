@@ -1,1 +1,1 @@
-web: node ./build/server.js
+web: node ./build/swagger/server.js
