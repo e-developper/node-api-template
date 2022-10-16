@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import type { Request, Response } from 'express'
 import { Router as expressRouter } from 'express'
 
@@ -8,7 +7,7 @@ import { Routes } from './constants'
 const router = expressRouter()
 
 /**
- * @openapi
+ * @swagger
  * /my-user:
  *   get:
  *     description: Welcome to swagger-jsdoc!
@@ -23,11 +22,11 @@ router.get(Routes.MY_USER, (_req: Request, res: Response) => {
 /**
  * @swagger
  * /save-user:
- *   get:
- *     summary: Retrieve a list of JSONPlaceholder users
- *     description: Retrieve a list of users from JSONPlaceholder. Can be used to populate a list of fake users when prototyping or testing an API.
+ *   post:
+ *     summary: Save a new user
+ *     description: Save a new user passed throught body request
  */
-router.get(Routes.SAVE_USER, (_req: Request, res: Response) => {
+router.post(Routes.SAVE_USER, (_req: Request, res: Response) => {
   res.status(HttpCode.OK).send('user saved')
 })
 
