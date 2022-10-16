@@ -1,5 +1,4 @@
 /* eslint-disable quote-props */
-// import bodyParser from 'body-parser'
 import type { Request, Response } from 'express'
 import express from 'express'
 import { logger } from 'firebase-functions'
@@ -144,7 +143,5 @@ server.use(BASE_ROUTE, router)
 // })
 
 // logger.log(swaggerSchema)
-
-// server.listen(3000)
 
 export default server

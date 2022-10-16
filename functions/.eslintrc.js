@@ -4,11 +4,6 @@ module.exports = {
     es6: true,
     node: true
   },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts']
-    }
-  },
   plugins: ['@typescript-eslint', 'import', 'prettier'],
   extends: [
     'eslint:recommended',
@@ -21,7 +16,9 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: './tsconfig.json',
+    createDefaultProgram: true
   },
   ignorePatterns: [
     '/lib/**/*', // Ignore built files.
