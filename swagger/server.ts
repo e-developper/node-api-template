@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import swaggerJSDoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 import { SWAGGER_DEFINITION } from './config/constant'
+import cors from 'cors'
 
 import dotenv from 'dotenv'
 
@@ -14,6 +15,7 @@ const port = process.env.PORT || 3000
 const app = express()
 
 app.use(bodyParser.json())
+app.use(cors({origin:'http://localhost:3000', methods: '*'}))
 
 console.log(swaggerSchema);
 

@@ -8,6 +8,7 @@ export const SWAGGER_DEFINITION: Options = {
       title: 'Express API for JSONPlaceholder',
       version: '1.0.0'
     },
+    host: 'https://swagger-temp.herokuapp.com/',
     basePath: '/api/v1'
   },
   apis: ['functions/src/api/router/*.ts']
