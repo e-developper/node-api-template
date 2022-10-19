@@ -20,7 +20,7 @@ console.log(swaggerSchema);
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerSchema))
 
 app.get('*', (_req: Request, res: Response) => {
-  res.redirect('/swagger')
+  res.send('Not found page')
 })
 
 app.listen(port, () => {
