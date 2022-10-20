@@ -5,10 +5,10 @@ export const SWAGGER_DEFINITION: Options = {
   definition: {
     swagger: '2.0',
     info: {
-      title: 'Express API for JSONPlaceholder',
+      title: 'PhysioCode API',
       version: '1.0.0'
     },
-    host: 'https://swagger-temp.herokuapp.com/',
+    host: 'https://us-central1-physiocode-prd.cloudfunctions.net/app',
     basePath: '/api/v1'
   },
   apis: ['functions/src/api/router/*.ts']
